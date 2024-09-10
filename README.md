@@ -33,7 +33,7 @@ The **Animal Species Detection** project leverages deep learning techniques to a
 The dataset used for this project consists of animal images collected from open-source platforms such as Kaggle and Google Dataset Search. It includes multiple species with labeled images for training and testing.
 
 ### Download the dataset:
-You can download the dataset [here](#https://storage.googleapis.com/bit_models/ilsvrc2012_wordnet_lemmas.txt). Ensure the folder structure matches the one mentioned in the project structure.
+You can download the dataset [here](https://storage.googleapis.com/bit_models/ilsvrc2012_wordnet_lemmas.txt). Ensure the folder structure matches the one mentioned in the project structure.
 
 ### Classes:
 - **Species 1:** Lion
