@@ -1,6 +1,4 @@
-Here's the updated version of the **Animal Species Detection** project in Markdown format for your GitHub repository:
 
-```markdown
 # 🐾 Animal Species Detection
 
 An **Animal Species Recognition and Classification** project aims to create an artificial intelligence-based system that recognizes and classifies the images of various animal species using computer vision and machine learning techniques.
@@ -13,8 +11,8 @@ This project is fascinating in terms of its application of machine learning and 
 
 ## 📄 Table of Contents
 - [Overview](#overview)
-- [Project Structure](#project-structure)
 - [Dataset](#dataset)
+- [Libraries Used](#libraries-used)
 - [Model Architecture](#model-architecture)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -31,25 +29,11 @@ The **Animal Species Detection** project leverages deep learning techniques to a
 - Can detect species like lions, elephants, tigers, bears, and more.
 - Pre-trained model available for easy usage or further fine-tuning.
 
-## 📁 Project Structure
-```bash
-├── dataset/                 # Directory containing image data
-│   ├── train/               # Training data
-│   ├── validation/          # Validation data
-│   ├── test/                # Test data
-├── models/                  # Saved trained models
-├── notebooks/               # Jupyter notebooks for experiments and visualization
-├── scripts/                 # Python scripts for training and testing
-├── results/                 # Contains results such as accuracy plots, confusion matrices
-├── README.md                # Project documentation
-└── requirements.txt         # Python dependencies
-```
-
 ## 📚 Dataset
 The dataset used for this project consists of animal images collected from open-source platforms such as Kaggle and Google Dataset Search. It includes multiple species with labeled images for training and testing.
 
 ### Download the dataset:
-You can download the dataset [here](#). Ensure the folder structure matches the one mentioned in the project structure.
+You can download the dataset [here](#https://storage.googleapis.com/bit_models/ilsvrc2012_wordnet_lemmas.txt). Ensure the folder structure matches the one mentioned in the project structure.
 
 ### Classes:
 - **Species 1:** Lion
@@ -57,6 +41,28 @@ You can download the dataset [here](#). Ensure the folder structure matches the 
 - **Species 3:** Tiger
 - **Species 4:** Bear
 - (Add more species here...)
+
+## 📚 Libraries Used
+
+Here are the main libraries used in this project:
+
+```python
+import tensorflow as tf
+import tensorflow_hub as hub
+from PIL import Image
+from io import BytesIO
+import matplotlib.pyplot as plt
+import numpy as np
+import requests
+```
+
+Additionally, the project uses a pre-trained model. Download the necessary label file using the following command:
+
+```bash
+!wget https://storage.googleapis.com/bit_models/ilsvrc2012_wordnet_lemmas.txt
+```
+
+This file contains the labels for animal species classification used with the pre-trained models.
 
 ## 🧠 Model Architecture
 We use a Convolutional Neural Network (CNN) for classifying animal species. The architecture is built using TensorFlow and Keras.
@@ -73,10 +79,12 @@ You can find the detailed architecture in the `notebooks/model.ipynb` file.
 ### Requirements
 - Python 3.7+
 - TensorFlow 2.x
-- Keras
+- TensorFlow Hub
+- Pillow
 - NumPy
 - Matplotlib
 - Scikit-learn
+- Requests
 
 ### Setup
 1. Clone this repository:
@@ -130,4 +138,4 @@ We welcome contributions! If you'd like to contribute, please follow these steps
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
 
-This version integrates your additional information into the project overview, providing a comprehensive description of the **Animal Species Detection** project.
+This version now includes the libraries you used and the necessary file to be downloaded using `wget`. The information is integrated to provide a clear understanding of the tools used in the project.
